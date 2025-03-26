@@ -1,12 +1,3 @@
-// const text = document.querySelector(".typing-text");
-// const words = ["Web Developer", "UI/UX Designer", "Freelancer"];
-// let i = 0;
-
-// setInterval(() => {
-//     text.textContent = words[i];
-//     i = (i + 1) % words.length;
-// }, 2000);
-
 const textElement = document.querySelector(".typing-text");
 const words = ["Web Developer"];
 let i = 0;
@@ -33,3 +24,18 @@ function animateText() {
 }
 
 setInterval(animateText, 3000);
+
+
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+

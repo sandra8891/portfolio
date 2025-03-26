@@ -1,0 +1,169 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: white;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 80px 50px;
+}
+
+.about-container {
+    max-width: 800px;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 40px;
+    text-align: left;
+}
+
+.highlight {
+    color: cyan;
+}
+
+.about-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.about-content p {
+    font-size: 16px;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.tabs {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.tab-link {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+.tab-link.active::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: cyan;
+    margin-top: 5px;
+}
+
+.tab-content {
+    display: none; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.tab-link.active {
+    font-weight: bold;
+    color: cyan;
+    border-bottom: 2px solid cyan;
+}
+.tab-content.active {
+    display: block;
+}
+
+.category {
+    color: cyan;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.btn {
+    background: cyan;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 18px;
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+} */
+
+
+/* function openTab(evt, tabName) {
+    let tabContent = document.querySelectorAll(".tab-content");
+    tabContent.forEach(content => {
+        content.style.display = "none";
+    });
+
+    let tabLinks = document.querySelectorAll(".tab-link");
+    tabLinks.forEach(link => {
+        link.classList.remove("active"); */
+    /* });
+
+    let selectedTab = document.getElementById(tabName);
+    if (selectedTab) {
+        selectedTab.style.display = "block"; */
+    /* }
+
+    evt.currentTarget.classList.add("active");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    let defaultTab = document.querySelector(".tab-link"); 
+    if (defaultTab) {
+        defaultTab.click(); 
+    }
+}); */
+/* 
+<section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="head">About <span class="highlight">Me</span></h2>
+                <h3>Full Stack Developer!</h3>
+                <p>
+                    Hello! My name is Sandra K S, and I am an enthusiastic and detail-oriented entry-level Python Full-Stack Developer with a passion for crafting efficient, scalable, and visually appealing web applications.
+                </p>
+
+                <div class="tabs">
+                    <button class="tab-link" onclick="openTab(event, 'skills')">Skills</button>
+                    <button class="tab-link" onclick="openTab(event, 'experience')">Experience</button>
+                    <button class="tab-link" onclick="openTab(event, 'education')">Education</button>
+                </div>
+                
+                <div id="skills" class="tab-content">
+                    <h4 class="category">Web Development</h4>
+                    <p>Skills content goes here...</p>
+                </div>
+                
+                <div id="experience" class="tab-content">
+                    <h4>Experience</h4>
+                    <p>Experience content goes here...</p>
+                </div>
+                
+                <div id="education" class="tab-content">
+                    <h4>Bachelor's in Computer Application</h4>
+                    <p>Graduated from Chinmaya College of Arts, Commerce, and Science.</p>
+                </div>
+    </section> */
