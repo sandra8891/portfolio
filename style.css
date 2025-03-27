@@ -11,7 +11,16 @@
 body {
     background-color: #0b0f19;
     color: white;
+    font-family: 'Poppins', sans-serif; /* Keep your original font */
+    text-align: center;
+    margin: 0;
+    padding: 0
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 
 header {
@@ -30,6 +39,8 @@ header {
 .logo {
     color: cyan;
     font-size: 24px;
+    margin-right: auto;
+    
 }
 
 
@@ -84,6 +95,7 @@ a{
     object-fit: cover;
     border-radius: 50%;
     z-index: 2;
+    position: relative;
 }
 
 
@@ -154,12 +166,15 @@ a{
     border-radius: 50%;
     background: linear-gradient(45deg, cyan, purple);
     box-shadow: 0 0 10px cyan, 0 0 20px purple;
-    transition: 0.3s;
+    transition:0.3s;
     font-size: 40px;
 }
 
 .social-icons a img {
     width: 25px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
@@ -266,7 +281,7 @@ a{
 
 .education-section {
     text-align: center;
-    padding: 50px;
+    padding: 150px;
     background-color: #0b0f19;
     color: white;
 }
@@ -339,60 +354,106 @@ a{
 }
 
 
-
-
-
-.projects-section {
-    text-align: center;
-    padding: 50px 0;
-    background-color:  #0b0f19;
+/* body {
+    background-color: #0b0f19;;
     color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+} */
+
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px cyan;
+    padding-top: 20px;
 }
+
 
 .projects-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 70px;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 40px;
 }
 
-.project {
-    width: 280px;
-    background: #111;
+
+.project-card {
+    width: 300px;
+    background: #11141c;
     border-radius: 15px;
     overflow: hidden;
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    padding: 20px;
     position: relative;
-    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.2);
+    transition: 0.3s ease-in-out;
+    border: 2px solid transparent;
 }
 
-.project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px cyan, 0 0 25px purple;
+
+.project-card:hover {
+    border: 2px solid cyan;
+    box-shadow: 0 0 15px cyan, 0 0 40px cyan;
 }
 
-.project img {
+
+.project-image img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.project-content {
-    padding: 15px;
-    background: #111;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+.project-card:hover .project-image img {
+    transform: scale(1.05);
 }
 
-.project h3 {
-    font-size: 18px;
-    font-weight: 600;
+
+.project-content h3 {
+    font-size: 1.3rem;
+    margin: 15px 0;
     color: cyan;
 }
+
+.project-content p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.review-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background: cyan;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.review-button:hover {
+    background: cyan;
+    box-shadow: 0 0 10px cyan;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -408,8 +469,11 @@ a{
     
     .nav-links {
         flex-direction: column;
-        text-align: center;
-        margin-left: 0;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .nav-links li{
+        margin:10px 0;
     }
 
     .hero {
@@ -429,5 +493,9 @@ a{
 
     .social-icons {
         justify-content: center;
+    }
+    .projects-container {
+        gap: 20px;
+        padding: 20px;
     }
 }
