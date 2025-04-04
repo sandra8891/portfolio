@@ -812,6 +812,8 @@ nav {
                 <!-- <a href="#"><i class='bx bxl-instagram-alt'></i></a> -->
             </div><br><br>
             <a href="#about" class="review-button">More About Me</a>
+            <a href="{{ url_for('static', filename='files/cv.pdf') }}" class="review-button" download>Download CV</a>
+
         </div>
         <div class="image-container">
             <img src="/static/images/image.jpg" alt="Profile">
@@ -822,7 +824,7 @@ nav {
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-image">
-                <img src="image/image.jpg" alt="Profile Picture">
+                <img src="/static/images/image.jpg" alt="Profile">
             </div>
             <div class="about-content">
                 <h2 class="head">About <span class="highlight">Me</span></h2>
@@ -967,28 +969,6 @@ if (menuIcon && navLinks) {
     });
 } else {
     console.error("Menu icon or nav links not found in the DOM");
-}
-
-
-const contactForm = document.querySelector('.contact-form form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Optional: Simple form validation
-        if (!contactForm.name.value || !contactForm.email.value) {
-            alert('Please fill in all the fields.');
-            return;
-        }
-
-        // Show success message
-        alert('Message sent successfully!');
-
-        // Reset the form
-        this.reset();
-    });
-} else {
-    console.error("Contact form not found in the DOM");
 }
 
 
