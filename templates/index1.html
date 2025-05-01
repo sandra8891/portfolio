@@ -649,6 +649,176 @@ nav {
 }
 
 
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Skills section container */
+#skill1 {
+    min-height: calc(100vh - 80px);
+    padding: 100px 50px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Section title */
+#skill1 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Skills container for card layout */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Individual skill card */
+.skill-card {
+    width: 150px;
+    background: var(--card-bg-color);
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effects for skill card */
+.skill-card:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* Skill icon image */
+.skill-icon img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Image hover effect */
+.skill-card:hover .skill-icon img {
+    transform: scale(1.1);
+}
+
+/* Skill name text */
+.skill-name {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    color: var(--primary-color);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    #skill1 {
+        padding: 80px 20px;
+    }
+
+    .skills-container {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .skill-card {
+        width: 120px;
+        padding: 15px;
+    }
+
+    .skill-icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .skill-name {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/* Footer container */
+#footer {
+    background-color: #000000; /* Black theme */
+    padding: 40px 50px;
+    color: var(--text-color);
+    text-align: center;
+    border-top: 2px solid var(--primary-color);
+}
+
+/* Footer content layout */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Copyright text */
+.copyright {
+    font-size: 1rem;
+    color: #b3b3b3; /* Subtle gray for contrast on black */
+}
+
+/* Back to top button */
+.back-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: #000000; /* Black text for contrast on cyan */
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Back to top hover effect */
+.back-to-top:hover {
+    box-shadow: 0 0 10px var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    #footer {
+        padding: 30px 20px;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+    }
+
+    .back-to-top {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     header {
         flex-direction: row;
@@ -771,6 +941,7 @@ nav {
         display: block; 
         margin-left: 20px; 
     }
+    
 }
     </style>
 </head>
@@ -783,6 +954,7 @@ nav {
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#skill1">Skills</a></li>
                 <!-- <li><a href="#resume">Resume</a></li> -->
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -859,6 +1031,117 @@ nav {
     </section>
 
 
+
+    <section id="skill1">
+        <div id="skill">
+            <div class="container">
+                <h1 class="mb-5 mt-3 text-center" data-aos="zoom-in" data-aos-duration="1500">
+                    <i class="fa-solid fa-computer"></i> Skills
+                </h1>
+                
+                <div class="skills-container">
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="skill-icon">
+                            <a href="https://html.com/" style="text-decoration: none;">
+                                <img src="/static/images/html.png" alt="HTML" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">HTML</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+                        <div class="skill-icon">
+                            <a href="https://www.w3.org/Style/CSS/Overview.en.html" style="text-decoration: none;">
+                                <img src="/static/images/css.png" alt="CSS" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">CSS</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                        <div class="skill-icon">
+                            <a href="https://getbootstrap.com/" style="text-decoration: none;">
+                                <img src="/static/images/bootstrap.jpeg" alt="Bootstrap" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">Bootstrap</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                        <div class="skill-icon">
+                            <a href="https://www.javascript.com/" style="text-decoration: none;">
+                                <img src="/static/images/JavaScript-logo.png" alt="JavaScript" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">JavaScript</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                        <div class="skill-icon">
+                            <a href="https://www.python.org/" style="text-decoration: none;">
+                                <img src="/static/images/python.png" alt="Python" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">Python</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                        <div class="skill-icon">
+                            <a href="https://www.djangoproject.com/" style="text-decoration: none;">
+                                <img src="/static/images/dj.png" alt="Django" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">Django</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                        <div class="skill-icon">
+                            <a href="https://react.dev/" style="text-decoration: none;">
+                                <img src="/static/images/react1.png" alt="React" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">React</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                        <div class="skill-icon">
+                            <a href="https://flask.palletsprojects.com/en/stable/" style="text-decoration: none;">
+                                <img src="/static/images/flask.jpg" alt="Flask" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">Flask</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                        <div class="skill-icon">
+                            <a href="https://www.mysql.com/" style="text-decoration: none;">
+                                <img src="/static/images/mysql.png" alt="MySQL" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">MySQL</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                        <div class="skill-icon">
+                            <a href="https://www.sqlite.org/index.html" style="text-decoration: none;">
+                                <img src="/static/images/sqlite2.svg" alt="SQLite" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">SQLite</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                        <div class="skill-icon">
+                            <a href="https://git-scm.com/" style="text-decoration: none;">
+                                <img src="/static/images/icons8-git-96(1).png" alt="Git" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">Git</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
+                        <div class="skill-icon">
+                            <a href="https://www.github.com/" style="text-decoration: none;">
+                                <img src="/static/images/github.png" alt="GitHub" class="img-fluid">
+                            </a>
+                        </div>
+                        <p class="skill-name">GitHub</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section id="projects" class="projects-section">
         <h2 class="section-title">My Projects</h2>
         <div class="projects-container">
@@ -912,6 +1195,14 @@ nav {
                 </div>
             </div>
             <div class="contact-form">
+
+                {% if success == True %}
+                <p style="color: limegreen;">✅ Message sent successfully!</p>
+            {% elif success == False %}
+                <p style="color: red;">❌ Failed to send message. Try again later.</p>
+            {% endif %}
+
+
                 <form action="/send_mail"id="contactForm" method="POST">
                     <input type="text" id="name" name="name" placeholder="Username" required>
                     <input type="email"id="email" name="email" placeholder="Email" required>
@@ -922,6 +1213,19 @@ nav {
             </div>
         </div>
     </section>
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">© 2025 Sandra K S. All Rights Reserved.</p>
+                <a href="#top" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
 
     
 <script>
