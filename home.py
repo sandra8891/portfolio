@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mail import Mail, Message
 
 app = Flask(__name__)
@@ -11,11 +11,14 @@ app.config['MAIL_PASSWORD'] = 'gupz xzhw rzne ywtc'  # App password from Google
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 
+# Add a secret key for flash messages
+app.config['SECRET_KEY'] = 'your-secret-key'  # Replace with a secure key
+
 mail = Mail(app)
 
 @app.route('/')
 def index():
-    return render_template('index1.html', success=None)
+    return render_template('index1.html')
 
 @app.route('/send_mail', methods=['POST'])
 def send_message():
@@ -32,10 +35,13 @@ def send_message():
         msg.body = f"From: {name}\nEmail: {email}\n\nMessage:\n{message}"
         mail.send(msg)
 
-        return render_template('index1.html', success=True)
+        flash('✅ Message sent successfully!', 'success')
     except Exception as e:
         print("Error sending mail:", e)
-        return render_template('index1.html', success=False)
+        flash('❌ Failed to send message. Try again later.', 'error')
+
+    # Redirect to the index route (GET request)
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)
